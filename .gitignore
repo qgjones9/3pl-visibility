@@ -1,0 +1,107 @@
+# Dependencies
+node_modules/
+
+# Vite / production build
+dist/
+dist-ssr/
+*.local
+
+# Vite cache
+.vite/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+.venv/
+venv/
+env/
+ENV/
+*.egg-info/
+.eggs/
+*.egg
+.mypy_cache/
+.ruff_cache/
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.nox/
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Environment and secrets
+.env
+.env.*
+!.env.example
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# TypeScript
+*.tsbuildinfo
+
+# Test and coverage
+coverage/
+test-results/
+playwright-report/
+playwright/.cache/
+
+# Linters and formatters
+.eslintcache
+.prettiercache
+
+# Package manager caches
+.npm
+.pnpm-store/
+.yarn/cache
+.yarn/unplugged
+.yarn/build-state.yml
+.yarn/install-state.gz
+.pnp.*
+
+# Docker
+docker-compose.override.yml
+
+# Database (local dev volumes)
+postgres-data/
+*.sql.backup
+
+# OS files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+Desktop.ini
+
+# Editor directories
+.idea/
+*.swp
+*.swo
+*~
+
+# Optional: ignore personal VS Code settings; commit extensions.json if you use one
+.vscode/*
+!.vscode/extensions.json
+
+# Cursor IDE (local rules, plans, agent state)
+.cursor/
+
+# Local scratch notes (not part of the app)
+scracth.txt
+scratch.txt
+
+# Agent and roadmap docs (local authoring; not tracked)
+docs/AGENTS.md
+docs/TODO.md
