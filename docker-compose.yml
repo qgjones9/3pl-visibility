@@ -1,0 +1,5 @@
+name: 3pl-visibility
+
+# Local development stack placeholder. PostgreSQL, backend, frontend, and worker
+# services are wired in a later step. Copy .env.example to .env before running.
+services: {}
