@@ -10,8 +10,8 @@ Real-time shipment and inventory visibility for third-party logistics operators.
 
 | Layer | Technology |
 |-------|------------|
-| Frontend | React, TypeScript, Tailwind CSS |
-| Backend | FastAPI, Pydantic, SQLAlchemy |
+| Frontend | React 19, TypeScript, Vite |
+| Backend | FastAPI, Pydantic, SQLAlchemy (planned) |
 | Database | PostgreSQL |
 | Infrastructure | Docker Compose |
 
@@ -25,19 +25,30 @@ React SPA  →  FastAPI services  →  PostgreSQL (system of record)
 
 The frontend provides shipment dashboards, inventory panels, and unified event timelines. FastAPI services expose versioned REST endpoints. PostgreSQL stores tenants, shipments, warehouses, and carrier events. Background workers ingest webhook and batch carrier data.
 
-## Documentation
+## Repository layout
 
-- [Runbook](docs/runbook.md) — prerequisites, local development, and deployment
-- [Architecture](docs/architecture/) — system design and component overview
+| Path | Purpose |
+|------|---------|
+| `frontend/` | React + Vite SPA (`src/components`, `src/views`, `src/api`, `src/types`) |
+| `backend/` | FastAPI package with app factory, config, and domain package stubs |
+| `infra/` | Migration and seed placeholders for database and demo data |
+| `docker-compose.yml` | Root Compose file for the local stack (service definitions in a later phase) |
+| `.env.example` | Documented variables for the API, database, and frontend |
+| `docs/` | Runbook and architecture documentation |
 
-## Clone
+## Getting started
 
 ```bash
 git clone https://github.com/qgjones9/3pl-visibility.git
 cd 3pl-visibility
+cp .env.example .env
 ```
 
-See the [runbook](docs/runbook.md) for setup instructions once the application scaffold is in place.
+Run the API and SPA from the repository root using the commands in the [runbook](docs/runbook.md). Copy `.env.example` to `.env` and adjust values for your environment before starting services.
+
+## Documentation
+
+- [Runbook](docs/runbook.md) — prerequisites, local development, environment variables, and Docker Compose
 
 ## License
 
